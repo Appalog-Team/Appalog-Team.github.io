@@ -1,0 +1,260 @@
+/* ============================================================
+   아빠로그 외부 약관 페이지 — 공통 스타일
+   앱 톤 (Sage Green #5C7560 + Charcoal #2C3531 + Cream #F3EFE6)
+   Pretendard 폰트 (한국어 가독성 최적화)
+============================================================ */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sage-primary: #5C7560;
+  --sage-light: #7A9580;
+  --sage-dark: #3D5340;
+  --charcoal: #2C3531;
+  --text-secondary: #6B6B6B;
+  --text-tertiary: #999999;
+  --cream: #F3EFE6;
+  --background: #FFFFFF;
+  --border-light: #E8E5DE;
+  --max-width: 720px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--charcoal);
+  background: var(--background);
+  word-break: keep-all;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ── Header ─────────────────────────────── */
+header {
+  background: var(--cream);
+  border-bottom: 1px solid var(--border-light);
+  padding: 20px;
+}
+
+header .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+header .tagline {
+  font-size: 13px;
+  color: var(--sage-primary);
+  margin-top: 2px;
+}
+
+/* ── Main ───────────────────────────────── */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+/* 페이지 제목 */
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* 본문 ── 약관/정책 마크다운 변환 결과 */
+.content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin: 32px 0 12px;
+}
+
+.content h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin: 24px 0 10px;
+}
+
+.content p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  color: var(--charcoal);
+}
+
+.content ul, .content ol {
+  margin: 8px 0 16px 24px;
+}
+
+.content li {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 6px;
+  color: var(--charcoal);
+}
+
+.content strong {
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+.content a {
+  color: var(--sage-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.content a:hover {
+  color: var(--sage-dark);
+}
+
+/* 부칙·시행일 박스 */
+.notice {
+  background: var(--cream);
+  border-left: 3px solid var(--sage-primary);
+  padding: 16px 20px;
+  margin: 24px 0;
+  border-radius: 4px;
+}
+
+.notice p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ── Footer ─────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border-light);
+  padding: 32px 20px;
+  background: var(--cream);
+}
+
+footer .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer .links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+footer .links a {
+  font-size: 14px;
+  color: var(--sage-primary);
+  text-decoration: none;
+}
+
+footer .links a:hover {
+  text-decoration: underline;
+}
+
+footer .company {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+}
+
+/* ── Index 페이지 카드 ───────────────────── */
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.intro p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (min-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  display: block;
+  padding: 24px;
+  background: var(--background);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.card:hover {
+  border-color: var(--sage-primary);
+  transform: translateY(-1px);
+}
+
+.card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ── Mobile ─────────────────────────────── */
+@media (max-width: 480px) {
+  header { padding: 16px 16px; }
+  header h1 { font-size: 18px; }
+  main { padding: 24px 16px 40px; }
+  .page-title { font-size: 24px; }
+  .content h2 { font-size: 18px; margin: 24px 0 10px; }
+  .content h3 { font-size: 16px; }
+  footer { padding: 24px 16px; }
+}
